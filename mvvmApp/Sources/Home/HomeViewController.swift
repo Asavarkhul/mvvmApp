@@ -22,10 +22,24 @@ final class HomeViewController: UIViewController {
         return viewModel
     }()
 
+    private let dataSource = HomeViewControllerDataSource()
+
     // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = dataSource
+        tableView.delegate = dataSource
 
+        bind(to: viewModel)
+
+        viewModel.viewDidLoad()
+    }
+
+    private func bind(to: HomeViewModel) {
+        viewModel.visibleItems = { [weak self] items in
+            self?.dataSource.update(with: items)
+            self?.tableView.reloadData()
+        }
     }
 }

@@ -10,5 +10,16 @@ import Foundation
 
 final class HomeRepository {
     
-    
+    func requestStuffs(callBack: @escaping ([Stuff]) -> Void) {
+        DispatchQueue.main.async {
+            let result: [Stuff] = [
+                Stuff(name: "Item1"),
+                Stuff(name: "Item2"),
+                Stuff(name: "Item3"),
+                Stuff(name: "Item4")
+            ]
+
+            callBack(result)
+        }
+    }
 }

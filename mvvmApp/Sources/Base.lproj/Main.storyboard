@@ -42,6 +42,9 @@
                                                 <constraint firstItem="d6d-rU-o28" firstAttribute="leading" secondItem="LrP-W7-W6V" secondAttribute="leadingMargin" id="qu0-Cz-xdd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="d6d-rU-o28" id="lua-h5-mmE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

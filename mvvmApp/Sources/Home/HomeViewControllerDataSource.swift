@@ -10,7 +10,24 @@ import UIKit
 
 final class HomeViewControllerDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    private var items: [String] = []
+    typealias Item = HomeViewModel.Item
+
+    private enum VisibleItem {
+        case stuff(name: String)
+    }
+
+    private var items: [VisibleItem] = []
+
+    // MARk: - Public
+
+    func update(with items: [Item]) {
+        self.items = items.map { item -> VisibleItem in
+            switch item {
+            case .stuff(name: let name):
+                return .stuff(name: name)
+            }
+        }
+    }
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -18,7 +35,16 @@ final class HomeViewControllerDataSource: NSObject, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard indexPath.item < items.count else {
+            fatalError("Index out of range")
+        }
+
+        switch items[indexPath.item] {
+        case .stuff(name: let name):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
+            cell.nameLabel.text = name
+            return cell
+        }
     }
 }
 
