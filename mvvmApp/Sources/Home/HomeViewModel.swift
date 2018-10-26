@@ -18,17 +18,20 @@ final class HomeViewModel {
 
     private let repository: HomeRepository
 
-    private var coursItems: [CourseItem] = [] {
+    private weak var delegate: HomeViewControllerDelegate?
+
+    private var courseItems: [CourseItem] = [] {
         didSet {
-            let items = coursItems.map { Item(coursItem: $0) }
+            let items = courseItems.map { Item(courseItem: $0) }
             visibleItems?(items)
         }
     }
 
     // MARK: - Initilizer
 
-    init(repository: HomeRepository) {
+    init(repository: HomeRepository, delegate: HomeViewControllerDelegate?) {
         self.repository = repository
+        self.delegate = delegate
     }
 
     // MARK: - Properties
@@ -49,9 +52,22 @@ final class HomeViewModel {
 
     func viewDidLoad() {
         repository.requestStuffs { [weak self] stuffs in
-            self?.coursItems = HomeViewModel.initialItems(from: stuffs)
+            self?.courseItems = HomeViewModel.initialItems(from: stuffs)
         }
     }
+
+    func didSelectItem(at index: Int) {
+        guard courseItems.count > index else {
+            return
+        }
+
+        let courseItem = courseItems[index]
+        if case .stuff(stuffItem: let stuffItem) = courseItem {
+            delegate?.homeScreenDidSelectDetail(with: stuffItem.name)
+        }
+    }
+
+    // MARK: - Utils
 
     private class func initialItems(from stuffs: [Stuff]) -> [CourseItem] {
         return stuffs.map {
@@ -63,8 +79,8 @@ final class HomeViewModel {
 // MARK: - Extension
 
 extension HomeViewModel.Item {
-    fileprivate init(coursItem: HomeViewModel.CourseItem) {
-        switch coursItem {
+    fileprivate init(courseItem: HomeViewModel.CourseItem) {
+        switch courseItem {
         case .stuff(stuffItem: let stuffItem):
             self = .stuff(name: stuffItem.name)
         }

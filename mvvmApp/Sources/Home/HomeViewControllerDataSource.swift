@@ -29,7 +29,10 @@ final class HomeViewControllerDataSource: NSObject, UITableViewDelegate, UITable
         }
     }
 
+    var didSelectItemAtIndex: ((Int) -> Void)?
+
     // MARK: - UITableViewDelegate
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -45,6 +48,15 @@ final class HomeViewControllerDataSource: NSObject, UITableViewDelegate, UITable
             cell.nameLabel.text = name
             return cell
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.item < items.count else {
+            assertionFailure("It's a mistake to select an item with an index out of range")
+            return
+        }
+
+        didSelectItemAtIndex?(indexPath.item)
     }
 }
 

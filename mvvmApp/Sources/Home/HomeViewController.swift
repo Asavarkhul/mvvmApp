@@ -16,11 +16,7 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Privates var
 
-    private lazy var viewModel: HomeViewModel = {
-        let repository = HomeRepository()
-        let viewModel = HomeViewModel(repository: repository)
-        return viewModel
-    }()
+    var viewModel: HomeViewModel!
 
     private let dataSource = HomeViewControllerDataSource()
 
@@ -31,9 +27,14 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
 
+        bind(to: dataSource)
         bind(to: viewModel)
 
         viewModel.viewDidLoad()
+    }
+
+    private func bind(to source: HomeViewControllerDataSource) {
+        source.didSelectItemAtIndex = viewModel.didSelectItem
     }
 
     private func bind(to: HomeViewModel) {
