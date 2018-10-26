@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F28792E2182F93D00394016 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28792D2182F93D00394016 /* DetailsViewController.swift */; };
+		2F2879302182FAC700394016 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28792F2182FAC700394016 /* AppCoordinator.swift */; };
+		2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879322182FD3F00394016 /* HomeCoordinator.swift */; };
+		2F2879352182FE9300394016 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879342182FE9300394016 /* Screens.swift */; };
+		2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F287936218303BA00394016 /* DetailsViewModel.swift */; };
 		2FF117162179B38800D78431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117152179B38800D78431 /* AppDelegate.swift */; };
 		2FF1171B2179B38800D78431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF117192179B38800D78431 /* Main.storyboard */; };
 		2FF1171D2179B38900D78431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1171C2179B38900D78431 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F28792D2182F93D00394016 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		2F28792F2182FAC700394016 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2F2879322182FD3F00394016 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2F2879342182FE9300394016 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		2F287936218303BA00394016 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		2FF117122179B38800D78431 /* mvvmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF117152179B38800D78431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF1171A2179B38800D78431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +76,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F28792C2182F8F500394016 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				2F28792D2182F93D00394016 /* DetailsViewController.swift */,
+				2F287936218303BA00394016 /* DetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		2F2879312182FD2F00394016 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				2F2879342182FE9300394016 /* Screens.swift */,
+				2F2879322182FD3F00394016 /* HomeCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		2FF117092179B38800D78431 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +135,10 @@
 			children = (
 				2FF117192179B38800D78431 /* Main.storyboard */,
 				2FF117152179B38800D78431 /* AppDelegate.swift */,
+				2F28792F2182FAC700394016 /* AppCoordinator.swift */,
+				2F2879312182FD2F00394016 /* Navigation */,
 				2FF117372179B60500D78431 /* Home */,
+				2F28792C2182F8F500394016 /* Details */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -255,10 +286,15 @@
 				2FF1173D2179B62F00D78431 /* HomeRepository.swift in Sources */,
 				2FF117162179B38800D78431 /* AppDelegate.swift in Sources */,
 				2FF1173B2179B62100D78431 /* HomeViewModel.swift in Sources */,
+				2F28792E2182F93D00394016 /* DetailsViewController.swift in Sources */,
 				2FF1173F2179B63F00D78431 /* HomeViewControllerDataSource.swift in Sources */,
 				2FF117462179B93700D78431 /* Stuff.swift in Sources */,
+				2F2879302182FAC700394016 /* AppCoordinator.swift in Sources */,
+				2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */,
 				2FF117422179B65300D78431 /* ItemTableViewCell.swift in Sources */,
 				2FF117392179B61900D78431 /* HomeViewController.swift in Sources */,
+				2F2879352182FE9300394016 /* Screens.swift in Sources */,
+				2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

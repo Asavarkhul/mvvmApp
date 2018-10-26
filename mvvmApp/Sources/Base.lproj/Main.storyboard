@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="mvvmApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="mvvmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,12 +59,44 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="9pm-ji-Zec" id="sgx-ca-NbT"/>
+                        <outlet property="tableView" destination="9pm-ji-Zec" id="vWp-kx-bSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="ylZ-7x-gnI">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="Wyv-tf-FMF" customClass="DetailsViewController" customModule="mvvmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XSw-MU-CHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwK-w7-pcQ">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AwK-w7-pcQ" firstAttribute="leading" secondItem="wfD-dz-Ks7" secondAttribute="leading" constant="16" id="1JQ-21-7TW"/>
+                            <constraint firstItem="AwK-w7-pcQ" firstAttribute="centerY" secondItem="XSw-MU-CHJ" secondAttribute="centerY" id="Dtz-yR-8uc"/>
+                            <constraint firstItem="AwK-w7-pcQ" firstAttribute="centerX" secondItem="XSw-MU-CHJ" secondAttribute="centerX" id="Tae-DL-vjN"/>
+                            <constraint firstItem="wfD-dz-Ks7" firstAttribute="trailing" secondItem="AwK-w7-pcQ" secondAttribute="trailing" constant="16" id="VZh-sN-8JG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wfD-dz-Ks7"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="AwK-w7-pcQ" id="RAQ-h5-eW8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jjg-cz-zlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
