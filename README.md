@@ -1,10 +1,6 @@
-# mvvmApp
+# README 🔥
 
-
-### Introduction
-
-This project is for pedagogic purposes. It includes some basical concept around the MVVM pattern. 
-The architecture is split in differents concepts, `Coordinator`, `ViewControllers`, `ViewModels`, `Repositories` and `Tests` 🙌
+This architecture is split in differents concepts, `Coordinator`, `ViewControllers`, `ViewModels`, `Repositories` and `Tests` 🙌
 
 ### Context
 
@@ -30,10 +26,10 @@ On the top of each repository, a protocol `RepositoryType` will allow us to test
 
 #### ViewModel:
 
-The ViewModel encapsulates the whole logic which doesn't have to be in the ViewController. It's divided in two parts :
+The `ViewModel` encapsulates the whole logic which doesn't have to be in the ViewController. It's divided in two parts :
 
-* Inputs: Every event from the viewController needs to be implemented in the viewModel, since it's listening for them. The main event which always need to be added is `viewDidLoad()`.
-* Outputs: After `viewDidLoad()`, the viewController is listening for some changes from the `viewModel`. For this, the `viewModel` needs to provide reactive var for each data/state needed. The main rule is to keep separate the UI logic between viewModel and viewController, so keep in mind that a viewModel can only `import Foundation` -> reactive var con't provide data from `UIKit` like `UIImage` for example ☝️.
+* **Inputs**: Every event from the viewController needs to be implemented in the viewModel, since it's listening for them. The main event which always need to be added is `viewDidLoad()`.
+* **Outputs**: After `viewDidLoad()`, the viewController is listening for some changes from the `viewModel`. For this, the `viewModel` needs to provide reactive var for each data/state needed. The main rule is to keep separate the UI logic between viewModel and viewController, so keep in mind that a viewModel can only `import Foundation` -> reactive var con't provide data from `UIKit` like `UIImage` for example ☝️.
 
 If your viewModel needs a `Repository`, so you'll need to inject a `RepositoryType`, in order to mock it more easily in the tests 🏋️‍♀️
 
