@@ -13,7 +13,6 @@ public class Screens {
     // MARK: - Properties
 
     let storyBoard = UIStoryboard(name: "Main", bundle: Bundle(for: Screens.self))
-
 }
 
 // MARK: - Home
@@ -25,8 +24,8 @@ protocol HomeViewControllerDelegate: class {
 extension Screens {
 
     func creatHomeViewController(repository: HomeRepository, delegate: HomeViewControllerDelegate?) -> UIViewController {
-        let viewModel = HomeViewModel(repository: repository, delegate: delegate)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let viewModel = HomeViewModel(repository: repository, delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }
@@ -35,8 +34,8 @@ extension Screens {
 extension Screens {
 
     func createDetailsViewController(title: String) -> UIViewController {
-        let viewModel = DetailsViewModel(title: title)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        let viewModel = DetailsViewModel(title: title)
         viewController.viewModel = viewModel
         return viewController
     }

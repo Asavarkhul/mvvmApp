@@ -12,11 +12,12 @@
 		2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879322182FD3F00394016 /* HomeCoordinator.swift */; };
 		2F2879352182FE9300394016 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879342182FE9300394016 /* Screens.swift */; };
 		2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F287936218303BA00394016 /* DetailsViewModel.swift */; };
+		2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */; };
+		2FE7677021B570BF002269B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FE7676F21B570BF002269B3 /* README.md */; };
 		2FF117162179B38800D78431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117152179B38800D78431 /* AppDelegate.swift */; };
 		2FF1171B2179B38800D78431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF117192179B38800D78431 /* Main.storyboard */; };
 		2FF1171D2179B38900D78431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1171C2179B38900D78431 /* Assets.xcassets */; };
 		2FF117202179B38900D78431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1171E2179B38900D78431 /* LaunchScreen.storyboard */; };
-		2FF1172B2179B38900D78431 /* mvvmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1172A2179B38900D78431 /* mvvmAppTests.swift */; };
 		2FF117392179B61900D78431 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117382179B61900D78431 /* HomeViewController.swift */; };
 		2FF1173B2179B62100D78431 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173A2179B62100D78431 /* HomeViewModel.swift */; };
 		2FF1173D2179B62F00D78431 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173C2179B62F00D78431 /* HomeRepository.swift */; };
@@ -41,6 +42,9 @@
 		2F2879322182FD3F00394016 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		2F2879342182FE9300394016 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 		2F287936218303BA00394016 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		2F3599D4219578AB00E32704 /* mvvmAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mvvmAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		2FE7676F21B570BF002269B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2FF117122179B38800D78431 /* mvvmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF117152179B38800D78431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF1171A2179B38800D78431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 		2FF1171F2179B38900D78431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FF117212179B38900D78431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FF117262179B38900D78431 /* mvvmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvvmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FF1172A2179B38900D78431 /* mvvmAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmAppTests.swift; sourceTree = "<group>"; };
 		2FF1172C2179B38900D78431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FF117382179B61900D78431 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FF1173A2179B62100D78431 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +97,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		2F3599D32195788F00E32704 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2FF117092179B38800D78431 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +126,7 @@
 		2FF117142179B38800D78431 /* mvvmApp */ = {
 			isa = PBXGroup;
 			children = (
+				2FE7676F21B570BF002269B3 /* README.md */,
 				2FF117352179B3FE00D78431 /* Sources */,
 				2FF117362179B40600D78431 /* Ressources */,
 			);
@@ -124,8 +136,9 @@
 		2FF117292179B38900D78431 /* mvvmAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				2FF1172A2179B38900D78431 /* mvvmAppTests.swift */,
 				2FF1172C2179B38900D78431 /* Info.plist */,
+				2F3599D4219578AB00E32704 /* mvvmAppTests-Bridging-Header.h */,
+				2F3599D32195788F00E32704 /* Home */,
 			);
 			path = mvvmAppTests;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 					};
 					2FF117252179B38900D78431 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 						TestTargetID = 2FF117112179B38800D78431;
 					};
 				};
@@ -265,6 +279,7 @@
 			files = (
 				2FF117202179B38900D78431 /* LaunchScreen.storyboard in Resources */,
 				2FF1171D2179B38900D78431 /* Assets.xcassets in Resources */,
+				2FE7677021B570BF002269B3 /* README.md in Resources */,
 				2FF1171B2179B38800D78431 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF1172B2179B38900D78431 /* mvvmAppTests.swift in Sources */,
+				2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +508,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4R3ZNHAV5;
 				INFOPLIST_FILE = mvvmAppTests/Info.plist;
@@ -503,6 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OPC.mvvmAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mvvmAppTests/mvvmAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvmApp.app/mvvmApp";
@@ -514,6 +532,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4R3ZNHAV5;
 				INFOPLIST_FILE = mvvmAppTests/Info.plist;
@@ -524,6 +543,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OPC.mvvmAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mvvmAppTests/mvvmAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvmApp.app/mvvmApp";

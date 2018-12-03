@@ -8,8 +8,12 @@
 
 import Foundation
 
-final class HomeRepository {
-    
+protocol HomeRepositoryType: class {
+    func requestStuffs(callBack: @escaping ([Stuff]) -> Void)
+}
+
+final class HomeRepository: HomeRepositoryType {
+
     func requestStuffs(callBack: @escaping ([Stuff]) -> Void) {
         DispatchQueue.main.async {
             let result: [Stuff] = [
@@ -18,7 +22,7 @@ final class HomeRepository {
                 Stuff(name: "Item3"),
                 Stuff(name: "Item4")
             ]
-
+            
             callBack(result)
         }
     }
