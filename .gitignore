@@ -1,0 +1,16 @@
+## Various settings
+.DS_STORE
+xcuserdata/
+*.pbxuser
+
+## Build generated
+DerivedData/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
