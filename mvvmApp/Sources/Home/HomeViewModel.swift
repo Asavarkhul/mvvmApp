@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct StuffItem {
+struct StuffItem: Equatable {
     let name: String
 }
 
@@ -16,7 +16,7 @@ final class HomeViewModel {
 
     // MARK: Private properties
 
-    private let repository: HomeRepository
+    private let repository: HomeRepositoryType
 
     private weak var delegate: HomeViewControllerDelegate?
 
@@ -29,18 +29,18 @@ final class HomeViewModel {
 
     // MARK: - Initilizer
 
-    init(repository: HomeRepository, delegate: HomeViewControllerDelegate?) {
+    init(repository: HomeRepositoryType, delegate: HomeViewControllerDelegate?) {
         self.repository = repository
         self.delegate = delegate
     }
 
     // MARK: - Properties
 
-    enum Item {
+    enum Item: Equatable {
         case stuff(name: String)
     }
 
-    fileprivate enum CourseItem {
+    fileprivate enum CourseItem: Equatable {
         case stuff(stuffItem: StuffItem)
     }
 
@@ -57,13 +57,13 @@ final class HomeViewModel {
     }
 
     func didSelectItem(at index: Int) {
-        guard courseItems.count > index else {
+        guard self.courseItems.count > index else {
             return
         }
-
-        let courseItem = courseItems[index]
+        
+        let courseItem = self.courseItems[index]
         if case .stuff(stuffItem: let stuffItem) = courseItem {
-            delegate?.homeScreenDidSelectDetail(with: stuffItem.name)
+            self.delegate?.homeScreenDidSelectDetail(with: stuffItem.name)
         }
     }
 
