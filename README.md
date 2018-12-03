@@ -1,6 +1,11 @@
 # README 🔥
 
-This architecture is split in differents concepts, `Coordinator`, `ViewControllers`, `ViewModels`, `Repositories` and `Tests` 🙌
+This architecture is split in differents concepts 🏋️‍♀️: 
+* `Coordinator`
+* `ViewControllers`
+* `ViewModels`
+* `Repositories`
+* `Tests`
 
 ### Context
 
@@ -16,7 +21,7 @@ Coordinator can, create and run child coordinators too.
 
 Since a coordinator is responsible of the entire flow of a specific flow (or stack), do not create a coordinator per viewController ☝️.
 
-The only way of using a coordinator, is to instanciate it (by injecting in it if necessary some specific ojetcs) and call the `start()` method, and **THAT'S ALL**. The entire logic will be encapsulated by delegation for the rest of the navigation.
+The only way of using a coordinator, is to instanciate it (by injecting in it if necessary some specific ojetcs) and call the `start()` method, and **that's all**. The entire logic will be encapsulated by delegation for the rest of the navigation.
 
 #### Repository:
 
@@ -35,4 +40,9 @@ If your viewModel needs a `Repository`, so you'll need to inject a `RepositoryTy
 
 #### ViewController:
 
-The last layer and not the less important 🙇‍♂️. But as it is mentioned in it's name, a `ViewController` only exists for **CONTROL**. So, if you want to test it, you'll only provide UI test, since the logic is extracted in the corresponding `ViewModel`.
+The last layer and not the less important 🙇‍♂️. But as it is mentioned in it's name, a `ViewController` only exists for **control**. So, if you want to test it, you'll only provide UI test, since the logic is extracted in the corresponding `ViewModel`.
+
+#### Tests
+
+This layer contains the differents tests classes for the entire project. The project contains a `.travis.yml` file, which allow us to run test on `master` branch, each time a new commit is added.
+-> You can find the output [there](https://travis-ci.org/Asavarkhul/mvvmApp).
