@@ -17,11 +17,14 @@ final class HomeCoordinator {
     private let navigationController: UINavigationController
 
     private let screens: Screens
+
+    private let network: NetworkType
     
     // MARK: - Initializer
 
-    init(presenter: UIWindow) {
+    init(presenter: UIWindow, network: NetworkType = Network()) {
         self.presenter = presenter
+        self.network = network
         self.navigationController = UINavigationController(nibName: nil, bundle: nil)
         self.screens = Screens()
     }
@@ -34,7 +37,7 @@ final class HomeCoordinator {
     }
 
     private func showHome() {
-        let repository = HomeRepository()
+        let repository = HomeRepository(network: network)
         let viewController = screens.creatHomeViewController(repository: repository, delegate: self)
         navigationController.viewControllers = [viewController]
     }
