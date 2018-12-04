@@ -11,3 +11,5 @@ import Foundation
 struct Stuff {
     let name: String
 }
+
+extension Stuff: Equatable {}
