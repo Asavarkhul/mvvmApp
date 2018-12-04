@@ -27,7 +27,7 @@ final class HomeViewModel {
         }
     }
 
-    // MARK: - Initilizer
+    // MARK: - Initializer
 
     init(repository: HomeRepositoryType, delegate: HomeViewControllerDelegate?) {
         self.repository = repository

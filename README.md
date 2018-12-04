@@ -27,7 +27,7 @@ The only way of using a coordinator, is to instanciate it (by injecting in it if
 
 This layer is responsible of calling the `Network` layer (will be implemented later), and managing the data from it, in order to present it to the viewModel.
 
-On the top of each repository, a protocol `RepositoryType` will allow us to test every method 💪.
+You can see that on the top of each repository, a protocol `RepositoryType` will allow us to test every method 💪.
 
 #### ViewModel:
 
@@ -40,9 +40,11 @@ If your viewModel needs a `Repository`, so you'll need to inject a `RepositoryTy
 
 #### ViewController:
 
-The last layer and not the less important 🙇‍♂️. But as it is mentioned in it's name, a `ViewController` only exists for **control**. So, if you want to test it, you'll only provide UI test, since the logic is extracted in the corresponding `ViewModel`.
+The last layer and not the less important 🙇‍♂️. But as it is mentioned in it's name, a `ViewController` only exists for **control**. So, if you want to test it, you'll only provide UI test, since the logic is extracted in the corresponding `ViewModel`. I recomand to add a custom snapshot to test it correctly.
 
 #### Tests
 
-This layer contains the differents tests classes for the entire project. The project contains a `.travis.yml` file, which allow us to run test on `master` branch, each time a new commit is added.
--> You can find the output [there](https://travis-ci.org/Asavarkhul/mvvmApp).
+This target contains the differents tests on `ViewModels` and custom classes.
+The project is connected to `Travis CI` and contains a `.travis.yml` file, which allow us to run test on `master` branch, each time a new commit is added.
+
+You can find the output [there](https://travis-ci.org/Asavarkhul/mvvmApp).

@@ -11,8 +11,7 @@ import XCTest
 
 final class HomeViewModelTests: XCTestCase {
 
-    func testGivenAHomeViewModel_WhenViewDidLoad_ThenItemsAreCrrectlyReturned() {
-        // Given
+    func testGivenAHomeViewModel_WhenViewDidLoad_ThenItemsAreCorrectlyReturned() {
         let repository = MockHomeRepository()
         repository.stuffs = [
             Stuff(name: "Item1"),
@@ -27,14 +26,10 @@ final class HomeViewModelTests: XCTestCase {
             .stuff(name: "Item3")
         ]
 
-        // Then
-
         viewModel.visibleItems = { items in
             XCTAssertEqual(items, expectedResult)
             expectation.fulfill()
         }
-
-        // When
 
         viewModel.viewDidLoad()
 
@@ -42,7 +37,6 @@ final class HomeViewModelTests: XCTestCase {
     }
 
     func testGivenAHomeViewModelWith3ItemsReturnedByRepository_WhenDidSelectItemAt1_ThenDelegateIsCorrectlySent() {
-        // Given
         let repository = MockHomeRepository()
         repository.stuffs = [
             Stuff(name: "Item1"),
@@ -54,10 +48,8 @@ final class HomeViewModelTests: XCTestCase {
 
         viewModel.viewDidLoad()
 
-        // When
         viewModel.didSelectItem(at: 1)
 
-        // Then
         XCTAssertEqual(delegate.title, "Item2")
     }
 
@@ -70,11 +62,11 @@ final class HomeViewModelTests: XCTestCase {
         ]
         let delegate = MockHomeViewControllerDelegate()
         let viewModel = HomeViewModel(repository: repository, delegate: delegate)
-        
+
         viewModel.viewDidLoad()
-        
+
         viewModel.didSelectItem(at: 6)
-        
+
         XCTAssertEqual(delegate.title, "")
     }
 }

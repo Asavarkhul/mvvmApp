@@ -10,7 +10,7 @@ import UIKit
 
 final class AppCoordinator {
 
-    // MARK: - Properties
+    // MARK: - Private properties
 
     private unowned var appDelegate: AppDelegate
 
@@ -22,7 +22,7 @@ final class AppCoordinator {
         self.appDelegate = appDelegate
     }
 
-    // MARK: - Coodinator
+    // MARK: - Coordinator
 
     func start() {
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
