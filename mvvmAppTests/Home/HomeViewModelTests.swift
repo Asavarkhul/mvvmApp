@@ -75,8 +75,8 @@ fileprivate final class MockHomeRepository: HomeRepositoryType {
 
     var stuffs: [Stuff] = []
 
-    func requestStuffs(callBack: @escaping ([Stuff]) -> Void) {
-        callBack(self.stuffs)
+    func requestStuffs(callBack: @escaping ([Stuff]) -> Void, failure: @escaping (() -> Void)) {
+        callBack(stuffs)
     }
 }
 

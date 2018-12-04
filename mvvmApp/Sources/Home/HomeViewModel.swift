@@ -51,9 +51,11 @@ final class HomeViewModel {
     // MARK: - Inputs
 
     func viewDidLoad() {
-        repository.requestStuffs { [weak self] stuffs in
-            self?.courseItems = HomeViewModel.initialItems(from: stuffs)
-        }
+        repository.requestStuffs(callBack: { [weak self] stuffs in
+                self?.courseItems = HomeViewModel.initialItems(from: stuffs)
+            }, failure: {
+                // FIXME: - Asks the coordinator to present an Alert 🚨
+            })
     }
 
     func didSelectItem(at index: Int) {

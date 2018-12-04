@@ -9,21 +9,18 @@
 import Foundation
 
 protocol HomeRepositoryType: class {
-    func requestStuffs(callBack: @escaping ([Stuff]) -> Void)
+    func requestStuffs(callBack: @escaping ([Stuff]) -> Void, failure: @escaping (() -> Void))
 }
 
 final class HomeRepository: HomeRepositoryType {
 
-    func requestStuffs(callBack: @escaping ([Stuff]) -> Void) {
-        DispatchQueue.main.async {
-            let result: [Stuff] = [
-                Stuff(name: "Item1"),
-                Stuff(name: "Item2"),
-                Stuff(name: "Item3"),
-                Stuff(name: "Item4")
-            ]
-            
-            callBack(result)
-        }
+    private let network: NetworkType
+
+    init(network: NetworkType) {
+        self.network = network
+    }
+
+    func requestStuffs(callBack: @escaping ([Stuff]) -> Void, failure: @escaping (() -> Void)) {
+        network.getStuffs(success: callBack, failure: failure)
     }
 }
