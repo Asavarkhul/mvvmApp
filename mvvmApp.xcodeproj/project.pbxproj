@@ -12,6 +12,7 @@
 		2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879322182FD3F00394016 /* HomeCoordinator.swift */; };
 		2F2879352182FE9300394016 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879342182FE9300394016 /* Screens.swift */; };
 		2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F287936218303BA00394016 /* DetailsViewModel.swift */; };
+		2F30289621B6B41C00C11CA4 /* HomeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */; };
 		2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */; };
 		2FE7677021B570BF002269B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FE7676F21B570BF002269B3 /* README.md */; };
 		2FF117162179B38800D78431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117152179B38800D78431 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		2F2879322182FD3F00394016 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		2F2879342182FE9300394016 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 		2F287936218303BA00394016 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryTests.swift; sourceTree = "<group>"; };
 		2F3599D4219578AB00E32704 /* mvvmAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mvvmAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		2FE7676F21B570BF002269B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */,
+				2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F30289621B6B41C00C11CA4 /* HomeRepositoryTests.swift in Sources */,
 				2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
