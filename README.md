@@ -1,6 +1,6 @@
 # README 🔥
 
-This architecture is split in differents concepts 🏋️‍♀️: 
+This architecture is split in differents layers/concepts 🏋️‍♀️: 
 * `Coordinator`
 * `ViewControllers`
 * `ViewModels`
@@ -9,7 +9,7 @@ This architecture is split in differents concepts 🏋️‍♀️:
 
 ### Context
 
-Since I've bin hired in my team I learned a lot of new concepts aroud clean architecture. This project is representing at this time my guideline for every day work.
+Since I've bin hired in my team I learned a lot of new concepts on clean architecture. This project is representing at this time my guideline for every workdays.
 I hope that you'll have as pleasure as me to read it and understand the different parts. Please be free to make any pull request if you think that some parts needs to be improved.
 
 ### Architecture
@@ -27,7 +27,7 @@ The only way of using a coordinator, is to instanciate it (by injecting in it if
 
 This layer is responsible of calling the `Network` layer (will be implemented later), and managing the data from it, in order to present it to the viewModel.
 
-You can see that on the top of each repository, a protocol `RepositoryType` will allow us to test every method 💪.
+You can see that on the top of each repository, a protocol `RepositoryType` will allow us to test everything by dependency injection 💪.
 
 #### ViewModel:
 
