@@ -12,9 +12,7 @@ final class CatalogCoordinator {
 
     // MARK: - Properties
 
-    private let presenter: UIWindow
-
-    private let navigationController: UINavigationController
+    private let presenter: UINavigationController
 
     private let screens: Screens
 
@@ -22,29 +20,27 @@ final class CatalogCoordinator {
     
     // MARK: - Initializer
 
-    init(presenter: UIWindow, network: NetworkType = Network()) {
+    init(presenter: UINavigationController, screens: Screens, network: NetworkType = Network()) {
         self.presenter = presenter
+        self.screens = screens
         self.network = network
-        self.navigationController = UINavigationController(nibName: nil, bundle: nil)
-        self.screens = Screens()
     }
     
     // MARK: - Coodinator
 
     func start() {
-        presenter.rootViewController = navigationController
         showHome()
     }
 
     private func showHome() {
         let repository = CatalogRepository(network: network)
         let viewController = screens.creatCatalogViewController(repository: repository, delegate: self)
-        navigationController.viewControllers = [viewController]
+        presenter.viewControllers = [viewController]
     }
 
     private func showDetails(for title: String) {
         let viewController = screens.createDetailsViewController(title: title)
-        navigationController.show(viewController, sender: nil)
+        presenter.show(viewController, sender: nil)
     }
 }
 

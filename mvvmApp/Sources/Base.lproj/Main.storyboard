@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wC8-4t-AKV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,20 +66,32 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YTE-59-pRS">
+        <!--Favorites View Controller-->
+        <scene sceneID="8Vm-SH-vhi">
             <objects>
-                <viewController id="wC8-4t-AKV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KAY-7g-KUc">
+                <viewController storyboardIdentifier="FavoritesViewController" id="DCn-fu-H1Q" customClass="FavoritesViewController" customModule="mvvmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uHl-Ge-Ae2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAVORITES 🔥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIs-yY-aHA">
+                                <rect key="frame" x="72" y="312" width="231" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yKJ-M7-bjL"/>
+                        <constraints>
+                            <constraint firstItem="XIs-yY-aHA" firstAttribute="centerX" secondItem="uHl-Ge-Ae2" secondAttribute="centerX" id="Gn2-1k-0HP"/>
+                            <constraint firstItem="XIs-yY-aHA" firstAttribute="centerY" secondItem="uHl-Ge-Ae2" secondAttribute="centerY" id="s4i-7u-xgO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p25-he-zlW"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydw-F4-xxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLj-tT-99J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692" y="134"/>
+            <point key="canvasLocation" x="135.19999999999999" y="795.6521739130435"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="ylZ-7x-gnI">

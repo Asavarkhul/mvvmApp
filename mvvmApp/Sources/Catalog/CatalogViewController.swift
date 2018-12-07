@@ -38,6 +38,11 @@ final class CatalogViewController: UIViewController {
     }
 
     private func bind(to: CatalogViewModel) {
+
+        viewModel.titleText = { [weak self] text in
+            self?.navigationItem.title = text
+        }
+
         viewModel.visibleItems = { [weak self] items in
             self?.dataSource.update(with: items)
             self?.tableView.reloadData()

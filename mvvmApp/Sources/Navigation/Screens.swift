@@ -40,3 +40,11 @@ extension Screens {
         return viewController
     }
 }
+
+extension Screens {
+
+    func createFavoritesViewController() -> UIViewController {
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "FavoritesViewController") as! FavoritesViewController
+        return viewController
+    }
+}

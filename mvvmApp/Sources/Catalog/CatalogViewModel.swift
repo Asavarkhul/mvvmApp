@@ -48,9 +48,13 @@ final class CatalogViewModel {
 
     var visibleItems: (([Item]) -> Void)?
 
+    var titleText: ((String) -> Void)?
+
     // MARK: - Inputs
 
     func viewDidLoad() {
+        titleText?("Catalog")
+
         repository.requestStuffs(callBack: { [weak self] stuffs in
                 self?.courseItems = CatalogViewModel.initialItems(from: stuffs)
             }, failure: {
