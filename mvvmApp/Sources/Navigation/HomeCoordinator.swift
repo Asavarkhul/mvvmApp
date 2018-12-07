@@ -2,54 +2,108 @@
 //  HomeCoordinator.swift
 //  mvvmApp
 //
-//  Created by Bertrand BLOC'H on 26/10/2018.
+//  Created by Bertrand BLOC'H on 07/12/2018.
 //  Copyright © 2018 OPC. All rights reserved.
 //
 
 import UIKit
 
-final class HomeCoordinator {
+enum ViewControllerItem: Int {
+    case catalog = 0
+    case favorite
+}
+
+protocol TabBarSourceType {
+    var items: [UINavigationController] { get set }
+}
+
+
+extension TabBarSourceType {
+    subscript(item: ViewControllerItem) -> UINavigationController {
+        get {
+            guard !items.isEmpty, item.rawValue < items.count, item.rawValue >= 0 else {
+                fatalError("Item does not exists")
+            }
+            return items[item.rawValue]
+        }
+    }
+}
+
+fileprivate class TabBarSource: TabBarSourceType {
+    var items: [UINavigationController] = [
+        UINavigationController(nibName: nil, bundle: nil),
+        UINavigationController(nibName: nil, bundle: nil)
+    ]
+
+    init() {
+        self[.catalog].tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        self[.favorite].tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+    }
+}
+
+final class HomeCoordinator: NSObject, UITabBarControllerDelegate {
 
     // MARK: - Properties
-
+    
     private let presenter: UIWindow
 
-    private let navigationController: UINavigationController
+    private let tabBarController: UITabBarController
 
     private let screens: Screens
 
-    private let network: NetworkType
-    
-    // MARK: - Initializer
+    private var catalogCoordinator: CatalogCoordinator?
 
-    init(presenter: UIWindow, network: NetworkType = Network()) {
+    private var favoritesCoordinator: FavoritesCoordinator?
+
+    private var tabBarSource: TabBarSourceType = TabBarSource()
+
+    // MARK: - Init
+
+    init(presenter: UIWindow) {
         self.presenter = presenter
-        self.network = network
-        self.navigationController = UINavigationController(nibName: nil, bundle: nil)
-        self.screens = Screens()
+
+        screens = Screens()
+
+        tabBarController = UITabBarController(nibName: nil, bundle: nil)
+        tabBarController.viewControllers = tabBarSource.items
+        tabBarController.selectedViewController = tabBarSource[.catalog]
+
+        super.init()
+
+        tabBarController.delegate = self
     }
-    
-    // MARK: - Coodinator
+
+    // MARK: - Coordinator
 
     func start() {
-        presenter.rootViewController = navigationController
-        showHome()
+        presenter.rootViewController = tabBarController
+        showCatalog()
     }
 
-    private func showHome() {
-        let repository = HomeRepository(network: network)
-        let viewController = screens.creatHomeViewController(repository: repository, delegate: self)
-        navigationController.viewControllers = [viewController]
+    private func showCatalog() {
+        catalogCoordinator = CatalogCoordinator(presenter: tabBarSource[.catalog], screens: screens)
+        catalogCoordinator?.start()
     }
 
-    private func showDetails(for title: String) {
-        let viewController = screens.createDetailsViewController(title: title)
-        navigationController.show(viewController, sender: nil)
+    private func showFavorites() {
+        favoritesCoordinator = FavoritesCoordinator(presenter: tabBarSource[.favorite], screens: screens)
+        favoritesCoordinator?.start()
     }
 }
 
-extension HomeCoordinator: HomeViewControllerDelegate {
-    func homeScreenDidSelectDetail(with title: String) {
-        showDetails(for: title)
+extension HomeCoordinator {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let index = tabBarController.selectedIndex
+        guard index < tabBarSource.items.count, let item = ViewControllerItem(rawValue: index) else {
+            fatalError("Selected ViewController Index Out Of range")
+        }
+
+        switch item {
+        case .catalog:
+            showCatalog()
+        case .favorite:
+            showFavorites()
+        }
     }
 }
+

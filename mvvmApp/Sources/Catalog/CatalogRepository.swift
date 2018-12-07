@@ -1,5 +1,5 @@
 //
-//  HomeRepository.swift
+//  CatalogRepository.swift
 //  mvvmApp
 //
 //  Created by Bertrand BLOC'H on 19/10/2018.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol HomeRepositoryType: class {
+protocol CatalogRepositoryType: class {
     func requestStuffs(callBack: @escaping ([Stuff]) -> Void, failure: @escaping (() -> Void))
 }
 
-final class HomeRepository: HomeRepositoryType {
+final class CatalogRepository: CatalogRepositoryType {
 
     private let network: NetworkType
 

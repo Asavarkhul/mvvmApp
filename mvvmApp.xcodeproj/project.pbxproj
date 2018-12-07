@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2F28792E2182F93D00394016 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28792D2182F93D00394016 /* DetailsViewController.swift */; };
 		2F2879302182FAC700394016 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28792F2182FAC700394016 /* AppCoordinator.swift */; };
-		2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879322182FD3F00394016 /* HomeCoordinator.swift */; };
+		2F2879332182FD3F00394016 /* CatalogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879322182FD3F00394016 /* CatalogCoordinator.swift */; };
 		2F2879352182FE9300394016 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2879342182FE9300394016 /* Screens.swift */; };
 		2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F287936218303BA00394016 /* DetailsViewModel.swift */; };
-		2F30289621B6B41C00C11CA4 /* HomeRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */; };
+		2F30289621B6B41C00C11CA4 /* CatalogRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30289521B6B41C00C11CA4 /* CatalogRepositoryTests.swift */; };
 		2F30289A21B6B90400C11CA4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30289921B6B90400C11CA4 /* Network.swift */; };
-		2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */; };
+		2F3599D6219578AC00E32704 /* CatalogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3599D5219578AC00E32704 /* CatalogViewModelTests.swift */; };
+		2FE1129421BA822B0035C5CD /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1129321BA822B0035C5CD /* HomeCoordinator.swift */; };
+		2FE1129821BAA8900035C5CD /* UIViewController+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1129721BAA8900035C5CD /* UIViewController+Commons.swift */; };
+		2FE1129B21BACAB00035C5CD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1129A21BACAB00035C5CD /* FavoriteViewController.swift */; };
+		2FE1129D21BACACF0035C5CD /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1129C21BACACF0035C5CD /* FavoritesCoordinator.swift */; };
 		2FE7677021B570BF002269B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FE7676F21B570BF002269B3 /* README.md */; };
 		2FF117162179B38800D78431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117152179B38800D78431 /* AppDelegate.swift */; };
 		2FF1171B2179B38800D78431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF117192179B38800D78431 /* Main.storyboard */; };
 		2FF1171D2179B38900D78431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1171C2179B38900D78431 /* Assets.xcassets */; };
 		2FF117202179B38900D78431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1171E2179B38900D78431 /* LaunchScreen.storyboard */; };
-		2FF117392179B61900D78431 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117382179B61900D78431 /* HomeViewController.swift */; };
-		2FF1173B2179B62100D78431 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173A2179B62100D78431 /* HomeViewModel.swift */; };
-		2FF1173D2179B62F00D78431 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173C2179B62F00D78431 /* HomeRepository.swift */; };
-		2FF1173F2179B63F00D78431 /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173E2179B63F00D78431 /* HomeViewControllerDataSource.swift */; };
+		2FF117392179B61900D78431 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117382179B61900D78431 /* CatalogViewController.swift */; };
+		2FF1173B2179B62100D78431 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173A2179B62100D78431 /* CatalogViewModel.swift */; };
+		2FF1173D2179B62F00D78431 /* CatalogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173C2179B62F00D78431 /* CatalogRepository.swift */; };
+		2FF1173F2179B63F00D78431 /* CatalogViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1173E2179B63F00D78431 /* CatalogViewControllerDataSource.swift */; };
 		2FF117422179B65300D78431 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117412179B65300D78431 /* ItemTableViewCell.swift */; };
 		2FF117462179B93700D78431 /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF117452179B93700D78431 /* Stuff.swift */; };
 /* End PBXBuildFile section */
@@ -41,13 +45,17 @@
 /* Begin PBXFileReference section */
 		2F28792D2182F93D00394016 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2F28792F2182FAC700394016 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		2F2879322182FD3F00394016 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2F2879322182FD3F00394016 /* CatalogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCoordinator.swift; sourceTree = "<group>"; };
 		2F2879342182FE9300394016 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
 		2F287936218303BA00394016 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
-		2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryTests.swift; sourceTree = "<group>"; };
+		2F30289521B6B41C00C11CA4 /* CatalogRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRepositoryTests.swift; sourceTree = "<group>"; };
 		2F30289921B6B90400C11CA4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2F3599D4219578AB00E32704 /* mvvmAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mvvmAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		2F3599D5219578AC00E32704 /* CatalogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModelTests.swift; sourceTree = "<group>"; };
+		2FE1129321BA822B0035C5CD /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2FE1129721BAA8900035C5CD /* UIViewController+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Commons.swift"; sourceTree = "<group>"; };
+		2FE1129A21BACAB00035C5CD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		2FE1129C21BACACF0035C5CD /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		2FE7676F21B570BF002269B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2FF117122179B38800D78431 /* mvvmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF117152179B38800D78431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +65,10 @@
 		2FF117212179B38900D78431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FF117262179B38900D78431 /* mvvmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvvmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF1172C2179B38900D78431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FF117382179B61900D78431 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2FF1173A2179B62100D78431 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		2FF1173C2179B62F00D78431 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		2FF1173E2179B63F00D78431 /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
+		2FF117382179B61900D78431 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		2FF1173A2179B62100D78431 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		2FF1173C2179B62F00D78431 /* CatalogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRepository.swift; sourceTree = "<group>"; };
+		2FF1173E2179B63F00D78431 /* CatalogViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewControllerDataSource.swift; sourceTree = "<group>"; };
 		2FF117412179B65300D78431 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		2FF117452179B93700D78431 /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				2F2879342182FE9300394016 /* Screens.swift */,
-				2F2879322182FD3F00394016 /* HomeCoordinator.swift */,
+				2FE1129321BA822B0035C5CD /* HomeCoordinator.swift */,
+				2F2879322182FD3F00394016 /* CatalogCoordinator.swift */,
+				2FE1129C21BACACF0035C5CD /* FavoritesCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -112,10 +122,34 @@
 		2F3599D32195788F00E32704 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2F3599D5219578AC00E32704 /* HomeViewModelTests.swift */,
-				2F30289521B6B41C00C11CA4 /* HomeRepositoryTests.swift */,
+				2F3599D5219578AC00E32704 /* CatalogViewModelTests.swift */,
+				2F30289521B6B41C00C11CA4 /* CatalogRepositoryTests.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2FE1129521BAA86D0035C5CD /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				2FE1129621BAA8740035C5CD /* UIKit */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		2FE1129621BAA8740035C5CD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2FE1129721BAA8900035C5CD /* UIViewController+Commons.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2FE1129921BACA710035C5CD /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2FE1129A21BACAB00035C5CD /* FavoriteViewController.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		2FF117092179B38800D78431 = {
@@ -163,9 +197,10 @@
 				2FF117152179B38800D78431 /* AppDelegate.swift */,
 				2F28792F2182FAC700394016 /* AppCoordinator.swift */,
 				2F2879312182FD2F00394016 /* Navigation */,
-				2FF117372179B60500D78431 /* Home */,
-				2F28792C2182F8F500394016 /* Details */,
+				2FF117372179B60500D78431 /* Catalog */,
+				2FE1129921BACA710035C5CD /* Favorites */,
 				2F30289821B6B8EC00C11CA4 /* Network */,
+				2FE1129521BAA86D0035C5CD /* Commons */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -180,17 +215,18 @@
 			path = Ressources;
 			sourceTree = "<group>";
 		};
-		2FF117372179B60500D78431 /* Home */ = {
+		2FF117372179B60500D78431 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				2F28792C2182F8F500394016 /* Details */,
 				2FF117432179B8F600D78431 /* Model */,
 				2FF117402179B64800D78431 /* Cells */,
-				2FF117382179B61900D78431 /* HomeViewController.swift */,
-				2FF1173A2179B62100D78431 /* HomeViewModel.swift */,
-				2FF1173C2179B62F00D78431 /* HomeRepository.swift */,
-				2FF1173E2179B63F00D78431 /* HomeViewControllerDataSource.swift */,
+				2FF117382179B61900D78431 /* CatalogViewController.swift */,
+				2FF1173A2179B62100D78431 /* CatalogViewModel.swift */,
+				2FF1173C2179B62F00D78431 /* CatalogRepository.swift */,
+				2FF1173E2179B63F00D78431 /* CatalogViewControllerDataSource.swift */,
 			);
-			path = Home;
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		2FF117402179B64800D78431 /* Cells */ = {
@@ -313,17 +349,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F30289A21B6B90400C11CA4 /* Network.swift in Sources */,
-				2FF1173D2179B62F00D78431 /* HomeRepository.swift in Sources */,
+				2FF1173D2179B62F00D78431 /* CatalogRepository.swift in Sources */,
 				2FF117162179B38800D78431 /* AppDelegate.swift in Sources */,
-				2FF1173B2179B62100D78431 /* HomeViewModel.swift in Sources */,
+				2FF1173B2179B62100D78431 /* CatalogViewModel.swift in Sources */,
 				2F28792E2182F93D00394016 /* DetailsViewController.swift in Sources */,
-				2FF1173F2179B63F00D78431 /* HomeViewControllerDataSource.swift in Sources */,
+				2FE1129821BAA8900035C5CD /* UIViewController+Commons.swift in Sources */,
+				2FE1129B21BACAB00035C5CD /* FavoriteViewController.swift in Sources */,
+				2FF1173F2179B63F00D78431 /* CatalogViewControllerDataSource.swift in Sources */,
 				2FF117462179B93700D78431 /* Stuff.swift in Sources */,
+				2FE1129D21BACACF0035C5CD /* FavoritesCoordinator.swift in Sources */,
 				2F2879302182FAC700394016 /* AppCoordinator.swift in Sources */,
-				2F2879332182FD3F00394016 /* HomeCoordinator.swift in Sources */,
+				2F2879332182FD3F00394016 /* CatalogCoordinator.swift in Sources */,
 				2FF117422179B65300D78431 /* ItemTableViewCell.swift in Sources */,
-				2FF117392179B61900D78431 /* HomeViewController.swift in Sources */,
+				2FF117392179B61900D78431 /* CatalogViewController.swift in Sources */,
 				2F2879352182FE9300394016 /* Screens.swift in Sources */,
+				2FE1129421BA822B0035C5CD /* HomeCoordinator.swift in Sources */,
 				2F287937218303BA00394016 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F30289621B6B41C00C11CA4 /* HomeRepositoryTests.swift in Sources */,
-				2F3599D6219578AC00E32704 /* HomeViewModelTests.swift in Sources */,
+				2F30289621B6B41C00C11CA4 /* CatalogRepositoryTests.swift in Sources */,
+				2F3599D6219578AC00E32704 /* CatalogViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

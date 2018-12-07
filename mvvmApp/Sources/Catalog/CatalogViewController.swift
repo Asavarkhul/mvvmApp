@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CatalogViewController.swift
 //  mvvmApp
 //
 //  Created by Bertrand BLOC'H on 19/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class CatalogViewController: UIViewController {
 
     // MARK: - Outlets
 
@@ -16,9 +16,9 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Privates var
 
-    var viewModel: HomeViewModel!
+    var viewModel: CatalogViewModel!
 
-    private let dataSource = HomeViewControllerDataSource()
+    private let dataSource = CatalogViewControllerDataSource()
 
     // MARK: - View life cycle
 
@@ -33,11 +33,16 @@ final class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
     }
 
-    private func bind(to source: HomeViewControllerDataSource) {
+    private func bind(to source: CatalogViewControllerDataSource) {
         source.didSelectItemAtIndex = viewModel.didSelectItem
     }
 
-    private func bind(to: HomeViewModel) {
+    private func bind(to: CatalogViewModel) {
+
+        viewModel.titleText = { [weak self] text in
+            self?.navigationItem.title = text
+        }
+
         viewModel.visibleItems = { [weak self] items in
             self?.dataSource.update(with: items)
             self?.tableView.reloadData()

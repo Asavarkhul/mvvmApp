@@ -1,5 +1,5 @@
 //
-//  HomeViewModelTests.swift
+//  CatalogViewModelTests.swift
 //  mvvmAppTests
 //
 //  Created by Bertrand BLOC'H on 09/11/2018.
@@ -9,18 +9,18 @@
 import XCTest
 @testable import mvvmApp
 
-final class HomeViewModelTests: XCTestCase {
+final class CatalogViewModelTests: XCTestCase {
 
     func testGivenAHomeViewModel_WhenViewDidLoad_ThenItemsAreCorrectlyReturned() {
-        let repository = MockHomeRepository()
+        let repository = MockCatalogRepository()
         repository.stuffs = [
             Stuff(name: "Item1"),
             Stuff(name: "Item2"),
             Stuff(name: "Item3")
         ]
-        let viewModel = HomeViewModel(repository: repository, delegate: nil)
+        let viewModel = CatalogViewModel(repository: repository, delegate: nil)
         let expectation = self.expectation(description: "Returned Items")
-        let expectedResult: [HomeViewModel.Item] = [
+        let expectedResult: [CatalogViewModel.Item] = [
             .stuff(name: "Item1"),
             .stuff(name: "Item2"),
             .stuff(name: "Item3")
@@ -37,14 +37,14 @@ final class HomeViewModelTests: XCTestCase {
     }
 
     func testGivenAHomeViewModelWith3ItemsReturnedByRepository_WhenDidSelectItemAt1_ThenDelegateIsCorrectlySent() {
-        let repository = MockHomeRepository()
+        let repository = MockCatalogRepository()
         repository.stuffs = [
             Stuff(name: "Item1"),
             Stuff(name: "Item2"),
             Stuff(name: "Item3")
         ]
-        let delegate = MockHomeViewControllerDelegate()
-        let viewModel = HomeViewModel(repository: repository, delegate: delegate)
+        let delegate = MockCatalogViewControllerDelegate()
+        let viewModel = CatalogViewModel(repository: repository, delegate: delegate)
 
         viewModel.viewDidLoad()
 
@@ -54,14 +54,14 @@ final class HomeViewModelTests: XCTestCase {
     }
 
     func testGivenAHomeViewModelWith3ItemsReturnedByRepository_WhenDidSelectItemAt6_ThenDelegateIsNotSent() {
-        let repository = MockHomeRepository()
+        let repository = MockCatalogRepository()
         repository.stuffs = [
             Stuff(name: "Item1"),
             Stuff(name: "Item2"),
             Stuff(name: "Item3")
         ]
-        let delegate = MockHomeViewControllerDelegate()
-        let viewModel = HomeViewModel(repository: repository, delegate: delegate)
+        let delegate = MockCatalogViewControllerDelegate()
+        let viewModel = CatalogViewModel(repository: repository, delegate: delegate)
 
         viewModel.viewDidLoad()
 
@@ -71,7 +71,7 @@ final class HomeViewModelTests: XCTestCase {
     }
 }
 
-fileprivate final class MockHomeRepository: HomeRepositoryType {
+fileprivate final class MockCatalogRepository: CatalogRepositoryType {
 
     var stuffs: [Stuff] = []
 
@@ -80,11 +80,11 @@ fileprivate final class MockHomeRepository: HomeRepositoryType {
     }
 }
 
-fileprivate final class MockHomeViewControllerDelegate: HomeViewControllerDelegate {
+fileprivate final class MockCatalogViewControllerDelegate: CatalogViewControllerDelegate {
 
     var title = ""
     
-    func homeScreenDidSelectDetail(with title: String) {
+    func catalogScreenDidSelectDetail(with title: String) {
         self.title = title
     }
 }
