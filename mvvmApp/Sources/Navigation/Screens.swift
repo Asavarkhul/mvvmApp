@@ -17,15 +17,15 @@ public class Screens {
 
 // MARK: - Home
 
-protocol HomeViewControllerDelegate: class {
-    func homeScreenDidSelectDetail(with title: String)
+protocol CatalogViewControllerDelegate: class {
+    func catalogScreenDidSelectDetail(with title: String)
 }
 
 extension Screens {
 
-    func creatHomeViewController(repository: HomeRepository, delegate: HomeViewControllerDelegate?) -> UIViewController {
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let viewModel = HomeViewModel(repository: repository, delegate: delegate)
+    func creatCatalogViewController(repository: CatalogRepository, delegate: CatalogViewControllerDelegate?) -> UIViewController {
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "CatalogViewController") as! CatalogViewController
+        let viewModel = CatalogViewModel(repository: repository, delegate: delegate)
         viewController.viewModel = viewModel
         return viewController
     }

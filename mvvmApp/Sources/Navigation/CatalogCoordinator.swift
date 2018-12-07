@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  CatalogCoordinator.swift
 //  mvvmApp
 //
 //  Created by Bertrand BLOC'H on 26/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeCoordinator {
+final class CatalogCoordinator {
 
     // MARK: - Properties
 
@@ -37,8 +37,8 @@ final class HomeCoordinator {
     }
 
     private func showHome() {
-        let repository = HomeRepository(network: network)
-        let viewController = screens.creatHomeViewController(repository: repository, delegate: self)
+        let repository = CatalogRepository(network: network)
+        let viewController = screens.creatCatalogViewController(repository: repository, delegate: self)
         navigationController.viewControllers = [viewController]
     }
 
@@ -48,8 +48,8 @@ final class HomeCoordinator {
     }
 }
 
-extension HomeCoordinator: HomeViewControllerDelegate {
-    func homeScreenDidSelectDetail(with title: String) {
+extension CatalogCoordinator: CatalogViewControllerDelegate {
+    func catalogScreenDidSelectDetail(with title: String) {
         showDetails(for: title)
     }
 }

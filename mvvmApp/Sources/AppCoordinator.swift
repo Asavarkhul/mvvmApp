@@ -14,7 +14,7 @@ final class AppCoordinator {
 
     private unowned var appDelegate: AppDelegate
 
-    private var homeCoordinator: HomeCoordinator?
+    private var homeCoordinator: CatalogCoordinator?
 
     // MARK: - Initializer
 
@@ -37,7 +37,7 @@ final class AppCoordinator {
     }
 
     private func showHome() {
-        homeCoordinator = HomeCoordinator(presenter: appDelegate.window!)
+        homeCoordinator = CatalogCoordinator(presenter: appDelegate.window!)
         homeCoordinator?.start()
     }
 }

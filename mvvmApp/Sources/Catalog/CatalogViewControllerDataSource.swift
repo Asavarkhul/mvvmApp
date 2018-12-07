@@ -1,5 +1,5 @@
 //
-//  HomeViewControllerDataSource.swift
+//  CatalogViewControllerDataSource.swift
 //  mvvmApp
 //
 //  Created by Bertrand BLOC'H on 19/10/2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class HomeViewControllerDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class CatalogViewControllerDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
-    typealias Item = HomeViewModel.Item
+    typealias Item = CatalogViewModel.Item
 
     private enum VisibleItem {
         case stuff(name: String)

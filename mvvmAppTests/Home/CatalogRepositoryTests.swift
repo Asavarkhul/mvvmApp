@@ -9,7 +9,7 @@
 import XCTest
 @testable import mvvmApp
 
-final class HomeRepositoryTests: XCTestCase {
+final class CatalogRepositoryTests: XCTestCase {
 
     func testGivenAHomeRepository_WhenRequestStuffs_ResultIsCorrectlyReturned() {
         let mockNetwork = MockNetwork()
@@ -20,7 +20,7 @@ final class HomeRepositoryTests: XCTestCase {
             Stuff(name: "Item3"),
             Stuff(name: "Item4")
         ]
-        let repository = HomeRepository(network: mockNetwork)
+        let repository = CatalogRepository(network: mockNetwork)
         let expectation = self.expectation(description: "Returned Stuffs")
 
         let expectedResult: [Stuff] = [

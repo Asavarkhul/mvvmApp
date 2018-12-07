@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  CatalogViewModel.swift
 //  mvvmApp
 //
 //  Created by Bertrand BLOC'H on 19/10/2018.
@@ -12,13 +12,13 @@ struct StuffItem: Equatable {
     let name: String
 }
 
-final class HomeViewModel {
+final class CatalogViewModel {
 
     // MARK: Private properties
 
-    private let repository: HomeRepositoryType
+    private let repository: CatalogRepositoryType
 
-    private weak var delegate: HomeViewControllerDelegate?
+    private weak var delegate: CatalogViewControllerDelegate?
 
     private var courseItems: [CourseItem] = [] {
         didSet {
@@ -29,7 +29,7 @@ final class HomeViewModel {
 
     // MARK: - Initializer
 
-    init(repository: HomeRepositoryType, delegate: HomeViewControllerDelegate?) {
+    init(repository: CatalogRepositoryType, delegate: CatalogViewControllerDelegate?) {
         self.repository = repository
         self.delegate = delegate
     }
@@ -52,7 +52,7 @@ final class HomeViewModel {
 
     func viewDidLoad() {
         repository.requestStuffs(callBack: { [weak self] stuffs in
-                self?.courseItems = HomeViewModel.initialItems(from: stuffs)
+                self?.courseItems = CatalogViewModel.initialItems(from: stuffs)
             }, failure: {
                 // FIXME: - Asks the coordinator to present an Alert 🚨
             })
@@ -65,7 +65,7 @@ final class HomeViewModel {
         
         let courseItem = self.courseItems[index]
         if case .stuff(stuffItem: let stuffItem) = courseItem {
-            self.delegate?.homeScreenDidSelectDetail(with: stuffItem.name)
+            self.delegate?.catalogScreenDidSelectDetail(with: stuffItem.name)
         }
     }
 
@@ -80,8 +80,8 @@ final class HomeViewModel {
 
 // MARK: - Extension
 
-extension HomeViewModel.Item {
-    fileprivate init(courseItem: HomeViewModel.CourseItem) {
+extension CatalogViewModel.Item {
+    fileprivate init(courseItem: CatalogViewModel.CourseItem) {
         switch courseItem {
         case .stuff(stuffItem: let stuffItem):
             self = .stuff(name: stuffItem.name)
